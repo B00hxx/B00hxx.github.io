@@ -9,6 +9,9 @@ layout: default
     <span>{{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
     {% for tag in page.tags %}<span class="tag">#{{ tag }}</span>{% endfor %}
   </div>
+  {% if page.image %}
+  <img class="cover" src="{{ page.image | relative_url }}" alt="">
+  {% endif %}
   <div class="prose">
     {{ content }}
   </div>

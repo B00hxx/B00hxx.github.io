@@ -203,6 +203,10 @@ pre {
 }
 pre code { background: none; padding: 0; font-size: inherit; }
 
+.cover { width: 100%; border-radius: var(--radius); margin: 0 0 44px; }
+.prose table { margin: 1.6em 0; }
+.prose td, .prose th { white-space: nowrap; }
+
 /* syntax colors (rouge) */
 .highlight .c, .highlight .c1, .highlight .cm { color: var(--muted); font-style: italic; }
 .highlight .k, .highlight .kd, .highlight .kn, .highlight .kc, .highlight .ow { color: #b4462b; }
@@ -250,12 +254,3 @@ pre code { background: none; padding: 0; font-size: inherit; }
 @media (max-width: 420px) {
   .nav a[href$="#experience"] { display: none; }
 }
-
-.tech-group + .tech-group { margin-top: 28px; }
-.tech-group h3 {
-  margin: 0 0 12px;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--muted);
-}
-.tech-group .skills { margin-top: 0; }
