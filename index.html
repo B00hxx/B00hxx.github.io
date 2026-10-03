@@ -82,6 +82,20 @@ layout: default
   </div>
 </section>
 
+<section class="section" id="technologies">
+  <h2 class="section-title">Technologies</h2>
+  <div class="section-body">
+    {% for g in site.data.technologies %}
+    <div class="tech-group">
+      <h3>{{ g.group }}</h3>
+      <ul class="skills">
+        {% for t in g.items %}<li>{{ t }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
 <section class="section" id="writing">
   <h2 class="section-title">Writing</h2>
   <div class="section-body">

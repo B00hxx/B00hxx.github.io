@@ -1,0 +1,17 @@
+- group: "Languages"
+  items: [Python, C++, SQL, Bash, JavaScript]
+
+- group: "AI & LLMs"
+  items: [PyTorch, Hugging Face, LangChain, LangGraph, RAG, Agents, Transformers, Embeddings]
+
+- group: "Backend & Data"
+  items: [FastAPI, PostgreSQL, Redis, pgvector, FAISS, REST APIs]
+
+- group: "Infrastructure"
+  items: [Linux, Docker, Docker Compose, Git, GitHub Actions, CUDA]
+
+- group: "AI Engineering"
+  items: [LLM Applications, Semantic Search, Semantic Caching, Vector Databases, Tool Calling, MCP]
+
+- group: "Security & Networking"
+  items: [Wazuh, Cowrie, pfSense, Nmap, GNS3, Active Directory]
