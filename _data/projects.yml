@@ -1,0 +1,12 @@
+# Your projects. The list is empty for now, so the site shows "Being rebuilt".
+# To add one, delete the "[]" below and copy this block (remove the leading "# "):
+#
+# - name: "My project"
+#   when: "2026"
+#   description: "One or two sentences on what it does and what's interesting about it."
+#   link: "https://github.com/B00hxx/my-project"   # optional
+#   image: "/assets/img/projects/my-project.png"     # optional
+#
+# Projects show in the order you list them, so put the best one first.
+
+[]

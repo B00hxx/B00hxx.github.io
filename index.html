@@ -1,0 +1,103 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="hero-text">
+    <p class="status">Open to AI engineering internships, early 2027</p>
+    <h1>Mohamed Baha Riahi</h1>
+    <p class="lede">I build the layer underneath LLM apps: <strong>caching, retrieval, and agents</strong> that hold up outside a demo. Final-year engineering student at Sup'Com, Tunis.</p>
+    <div class="actions">
+      {% if site.cv_url != "" %}
+      <a class="btn primary" href="{{ site.cv_url | relative_url }}">Download CV</a>
+      {% else %}
+      <a class="btn primary" href="#writing">Read my writing</a>
+      {% endif %}
+      <a class="btn" href="https://github.com/{{ site.github }}">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        GitHub
+      </a>
+      {% if site.linkedin != "" %}<a class="btn" href="https://www.linkedin.com/in/{{ site.linkedin }}">LinkedIn</a>{% endif %}
+      {% if site.email != "" %}<a class="btn" href="mailto:{{ site.email }}">Email me</a>{% endif %}
+    </div>
+  </div>
+
+  <figure class="portrait">
+    <div class="portrait-frame">
+      <span class="initials" aria-hidden="true">BR</span>
+      {% if site.avatar != "" %}
+      <img src="{{ site.avatar | relative_url }}" alt="Portrait of {{ site.author }}" onerror="this.remove()">
+      {% endif %}
+    </div>
+  </figure>
+</section>
+
+<section class="section" id="about">
+  <h2 class="section-title">About</h2>
+  <div class="section-body">
+    <p>I came to AI through networking: my degree at Sup'Com (Higher School of Communications of Tunis) is telecom-focused, and that background shows in what I like building. I care less about the model and more about the system around it: how requests are routed, what gets cached, what gets retrieved, and how an agent recovers when a step fails.</p>
+    <p>Right now I'm looking for an end-of-studies internship in AI engineering, in Europe or North America, starting early 2027. Longer term, I want to go deeper into research through a master's or a PhD.</p>
+    <ul class="skills">
+      <li>LLM infrastructure</li><li>RAG</li><li>Agentic AI</li><li>Python</li><li>C++</li><li>Distributed systems</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <h2 class="section-title">Experience</h2>
+  <div class="section-body">
+    <ol class="timeline">
+      <li>
+        <time>Jul – Aug 2026</time>
+        <h3>AI Engineering Intern, <span class="org">Elyadata</span></h3>
+        <p>Built a semantic caching middleware for LLM applications.</p>
+      </li>
+      <li>
+        <time>Jul – Aug 2025</time>
+        <h3>AI &amp; Cybersecurity Engineering Intern, <span class="org">SFM Technologies</span></h3>
+        <p>Built a honeypot and monitoring pipeline.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="section-body">
+    {% if site.data.projects and site.data.projects.size > 0 %}
+    <div class="projects">
+      {% for p in site.data.projects %}
+      <article class="project">
+        {% if p.image %}<img src="{{ p.image | relative_url }}" alt="">{% endif %}
+        <div class="project-body">
+          {% if p.when %}<span class="when">{{ p.when }}</span>{% endif %}
+          <h3>{% if p.link %}<a href="{{ p.link }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</h3>
+          {% if p.description %}<p>{{ p.description }}</p>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="placeholder">Rebuilding a few things from scratch. New projects will show up here as they're ready.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section" id="writing">
+  <h2 class="section-title">Writing</h2>
+  <div class="section-body">
+    {% if site.posts.size > 0 %}
+    <ul class="posts">
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          <span class="post-title">{{ post.title }}</span>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="placeholder">First post coming soon.</p>
+    {% endif %}
+  </div>
+</section>

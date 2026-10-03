@@ -1,0 +1,37 @@
+# ─────────────────────────────────────────────
+#  Edit these values — everything on the site reads from here.
+# ─────────────────────────────────────────────
+title: Baha Riahi
+author: Mohamed Baha Riahi
+tagline: AI engineer in the making — LLM infrastructure, RAG, and agents.
+description: >-
+  Final-year ICT engineering student at Sup'Com (Tunis). I build LLM
+  infrastructure, retrieval systems and agentic applications, and write
+  about what I learn along the way.
+url: "https://b00hxx.github.io"
+baseurl: ""
+
+# Contact links (leave a value empty "" to hide it)
+email: "mohamedbahariahi6@gmail.com"            # e.g. you@example.com
+github: "B00hxx"
+linkedin: "mohamedbahariahi"         # just the handle, e.g. mohamed-baha-riahi
+cv_url: "/assets/cv.pdf"           # e.g. /assets/cv.pdf after you upload your CV there
+
+# Profile photo: upload it to assets/img/ and put its path here
+avatar: "/assets/img/me.jpeg"
+
+# ─────────────────────────────────────────────
+#  Build settings — no need to touch these
+# ─────────────────────────────────────────────
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: /blog/:year/:title/
+timezone: Africa/Tunis
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - README.md
