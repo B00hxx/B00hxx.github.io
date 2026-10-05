@@ -1,12 +1,32 @@
-# Your projects. The list is empty for now, so the site shows "Being rebuilt".
-# To add one, delete the "[]" below and copy this block (remove the leading "# "):
+# Your projects. Projects show in the order you list them, so put the best one first.
 #
 # - name: "My project"
 #   when: "2026"
 #   description: "One or two sentences on what it does and what's interesting about it."
 #   link: "https://github.com/B00hxx/my-project"   # optional
 #   image: "/assets/img/projects/my-project.png"     # optional
-#
-# Projects show in the order you list them, so put the best one first.
 
-[]
+- name: "Semantic caching middleware for LLM apps"
+  when: "2026 · Elyadata internship"
+  description: "A Python library that sits between users and an LLM and serves stored answers to questions that mean the same thing, even when they're worded differently. Redis Stack with an HNSW index for fast lookups, PostgreSQL + pgvector as the durable tier, PII masking with Presidio, six pluggable invalidation and eviction policies, and Prometheus/Grafana observability. The similarity threshold was tuned on labelled data rather than picked by feel."
+  link: "/blog/2026/semantic-caching/"
+  image: "/assets/img/posts/semantic-caching/cover.png"
+
+- name: "Dynamic malware classification from API call sequences"
+  when: "2026 · Sup'Com P2M"
+  description: "Detects malware from the first 100 Windows API calls a program makes at runtime, trained on 43,876 samples where only 2.5% are goodware. I compared four PyTorch architectures on the same data: a bidirectional LSTM with attention, a residual CNN over sequences reshaped into images, a Transformer, and a graph attention network over API-call graphs. The GNN came out best, with a 0.993 ROC-AUC. The models are served through a FastAPI inference API. Built with Mohamed Aziz Merichkou, supervised by Prof. Slim Rekhis (CN&S Lab)."
+  link: "https://github.com/BahaRiahi3/p2m"
+
+- name: "AthenaAI: a RAG study companion"
+  when: "2025"
+  description: "Upload a PDF, then chat with it or turn it into flashcards, with everything running on a local LLM (Gemma 7B via Ollama). PDFs are converted to Markdown with Marker, which preserves layout and handles OCR, then split into chunks. Each chunk is summarised by the LLM before being embedded with Sentence Transformers into ChromaDB, and answers can optionally pull in live web results. FastAPI backend with JWT auth and PostgreSQL, React frontend, deployed with Docker Compose. Built in a team of four."
+
+
+- name: "Honeypot and security monitoring pipeline"
+  when: "2025 · SFM Technologies internship"
+  description: "A honeypot deployment feeding a monitoring pipeline that collects, centralises and surfaces attacker activity, built during my AI & cybersecurity engineering internship."
+
+- name: "Swipy News: an AI-summarised news app"
+  when: "2026"
+  description: "A Flutter mobile app that turns the news into a swipeable card deck: swipe one way to read the full story, the other to skip, and bookmark what you want to keep. A Python pipeline pulls headlines from NewsAPI and condenses each one into three bullet points with GPT-4o-mini. It deduplicates articles by URL hash before writing them to Firestore. Firebase Auth provides per-user saved libraries."
+
