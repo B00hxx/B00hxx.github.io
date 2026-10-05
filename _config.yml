@@ -18,7 +18,7 @@ linkedin: "mohamedbahariahi"         # just the handle, e.g. mohamed-baha-riahi
 cv_url: "/assets/cv.pdf"           # e.g. /assets/cv.pdf after you upload your CV there
 
 # Profile photo: upload it to assets/img/ and put its path here
-avatar: "/assets/img/me.jpeg"
+avatar: "/assets/img/me.jpg"
 
 # ─────────────────────────────────────────────
 #  Build settings — no need to touch these
