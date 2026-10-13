@@ -28,9 +28,11 @@
   repo: "https://github.com/B00hxx/Athena_AI"
   image: "/assets/img/posts/athena-rag/cover.png"
 
-- name: "Honeypot and security monitoring pipeline"
+- name: "Honeypot and security monitoring lab"
   when: "2025 · SFM Technologies internship"
-  description: "A honeypot deployment feeding a monitoring pipeline that collects, centralises and surfaces attacker activity, built during my AI & cybersecurity engineering internship."
+  description: "A segmented lab network emulated in GNS3: a pfSense firewall splits it into a core zone (Windows Server with Active Directory) and a honeypot zone, and forwards SSH from outside to a Cowrie honeypot. Every login attempt and command typed in Cowrie's fake shell is shipped by a Wazuh agent to a Wazuh manager, where custom rules turn them into alerts. Tested with Hydra brute force, Nmap scans and live shell sessions from a Kali attacker."
+  link: "/blog/2026/honeypot-lab/"
+  image: "/assets/img/posts/honeypot-lab/cover.png"
 
 - name: "Swipy News: an AI-summarised news app"
   when: "2026"
