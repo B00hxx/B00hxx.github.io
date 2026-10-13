@@ -3,22 +3,27 @@
 # - name: "My project"
 #   when: "2026"
 #   description: "One or two sentences on what it does and what's interesting about it."
-#   link: "https://github.com/B00hxx/my-project"   # optional
+#   link: "/blog/2026/my-post/"                    # optional: blog write-up (the title links here too)
+#   repo: "https://github.com/B00hxx/my-project"   # optional: shows a "Code on GitHub" link
 #   image: "/assets/img/projects/my-project.png"     # optional
 
 - name: "Semantic caching middleware for LLM apps"
   when: "2026 · Elyadata internship"
   description: "A Python library that sits between users and an LLM and serves stored answers to questions that mean the same thing, even when they're worded differently. Redis Stack with an HNSW index for fast lookups, PostgreSQL + pgvector as the durable tier, PII masking with Presidio, six pluggable invalidation and eviction policies, and Prometheus/Grafana observability. The similarity threshold was tuned on labelled data rather than picked by feel."
   link: "/blog/2026/semantic-caching/"
+  repo: "https://github.com/B00hxx/semantic_caching"
   image: "/assets/img/posts/semantic-caching/cover.png"
 
 - name: "Dynamic malware classification from API call sequences"
   when: "2026 · Sup'Com P2M"
   description: "Detects malware from the first 100 Windows API calls a program makes at runtime, trained on 43,876 samples where only 2.5% are goodware. I compared four PyTorch architectures on the same data: a bidirectional LSTM with attention, a residual CNN over sequences reshaped into images, a Transformer, and a graph attention network over API-call graphs. The GNN came out best, with a 0.993 ROC-AUC. The models are served through a FastAPI inference API. Built with Mohamed Aziz Merichkou, supervised by Prof. Slim Rekhis (CN&S Lab)."
-- name: "AthenaAI: a RAG study companion"
-  when: "2025"
-  description: "Upload a PDF, then chat with it or turn it into flashcards, with everything running on a local LLM (Gemma 7B via Ollama). PDFs are converted to Markdown with Marker, which preserves layout and handles OCR, then split into chunks. Each chunk is summarised by the LLM before being embedded with Sentence Transformers into ChromaDB, and answers can optionally pull in live web results. FastAPI backend with JWT auth and PostgreSQL, React frontend, deployed with Docker Compose. Built in a team of four."
 
+- name: "AthenaAI: a local RAG study companion"
+  when: "2025, rebuilt 2026"
+  description: "Upload a PDF, ask it questions and get answers that cite the exact page and section they came from, or turn it into flashcards, with everything running on a local LLM (Gemma 7B via Ollama). Marker converts PDFs to Markdown with layout detection and OCR; passages are split along page and heading boundaries, embedded with MiniLM and indexed in ChromaDB. Answers stream token by token. Ingestion runs as a queue of isolated parser processes that can be cancelled, timed out and resumed after a restart. FastAPI, PostgreSQL, React, Docker Compose with a GPU override, and 110 backend tests."
+  link: "/blog/2026/athena-rag/"
+  repo: "https://github.com/B00hxx/Athena_AI"
+  image: "/assets/img/posts/athena-rag/cover.png"
 
 - name: "Honeypot and security monitoring pipeline"
   when: "2025 · SFM Technologies internship"

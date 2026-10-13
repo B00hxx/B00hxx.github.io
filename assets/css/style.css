@@ -152,6 +152,9 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
 .project h3 a { color: var(--ink); }
 .project .when { font-size: 14px; color: var(--muted); }
 .project p { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+.project-links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 14px; }
+.project-links a { display: inline-flex; align-items: center; gap: 7px; font-size: 15px; font-weight: 600; }
+.project-links svg { width: 16px; height: 16px; }
 .placeholder {
   border: 1.5px dashed var(--line); border-radius: var(--radius);
   padding: 28px; color: var(--muted); font-size: 16px; margin: 0;
