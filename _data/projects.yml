@@ -14,9 +14,12 @@
   repo: "https://github.com/B00hxx/semantic_caching"
   image: "/assets/img/posts/semantic-caching/cover.png"
 
-- name: "Dynamic malware classification from API call sequences"
+- name: "Malware detection from dynamic API call sequences"
   when: "2026 · Sup'Com P2M"
-  description: "Detects malware from the first 100 Windows API calls a program makes at runtime, trained on 43,876 samples where only 2.5% are goodware. I compared four PyTorch architectures on the same data: a bidirectional LSTM with attention, a residual CNN over sequences reshaped into images, a Transformer, and a graph attention network over API-call graphs. The GNN came out best, with a 0.993 ROC-AUC. The models are served through a FastAPI inference API. Built with Mohamed Aziz Merichkou, supervised by Prof. Slim Rekhis (CN&S Lab)."
+  description: "Classifies Windows executables as malware or goodware from the first 100 API calls they make in a sandbox (43,876 samples, only 2.5% goodware). About 70% of the dataset's rows are exact duplicates, so I built a deduplicated evaluation protocol and showed that the usual random split overstates MCC by about 0.1. Four PyTorch models (BiLSTM, Transformer, 1D-CNN and a GATv2 network over API-transition graphs) are benchmarked against n-gram baselines over 5 seeds; a hybrid ensemble comes out on top with 0.832 MCC and 0.990 ROC-AUC. Served by a FastAPI service with per-call explanations. Built with Mohamed Aziz Merichkou, supervised by Prof. Slim Rekhis (CN&S Lab)."
+  link: "/blog/2026/malware-api-calls/"
+  repo: "https://github.com/B00hxx/DL_Malware_Classifier"
+  image: "/assets/img/posts/malware-api-calls/cover.png"
 
 - name: "AthenaAI: a local RAG study companion"
   when: "2025, rebuilt 2026"
